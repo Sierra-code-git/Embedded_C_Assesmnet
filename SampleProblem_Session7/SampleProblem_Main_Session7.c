@@ -5,17 +5,25 @@
 #include "uart.h"
 
 int main(void) {
-    LED_Init();
-    ADC_Init();
-    UART_Init(9600);
+              // Initialize the LED pin (set as output)
+
+               // Initialize the ADC module to read analog values (e.g., from temperature sensor)
+
+        // Initialize UART communication with a baud rate of 9600
 
     while (1) {
-        LED_Toggle();
-        _delay_ms(500);
+             // Toggle the LED state (ON/OFF)
 
-        float temp = Read_Temperature();
-        char buffer[32];
-        snprintf(buffer, sizeof(buffer), "Temp: %.2f C\r\n", temp);
-        UART_SendString(buffer);
+           // Wait for 500 milliseconds to create a blinking effect
+
+         // Read temperature value from sensor and store it in 'temp'
+
+         // Create a character buffer to hold the formatted temperature string
+
+        
+        // Format the temperature value into a string with 2 decimal places and store it in 'buffer'
+
+         // Send the formatted temperature string over UART to a serial terminal
     }
 }
+
