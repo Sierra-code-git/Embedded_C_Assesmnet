@@ -7,12 +7,12 @@
 // Function to simulate a delay (blocking delay)
 void delay_ms(int ms) {
     volatile long i, j; 	// Use volatile to prevent optimization
-    for (i = 0; i < ms; i++) {
-        for (j = 0; j < 1000; j++) { 
+    
+	
 // Adjust this value for desired delay
                // Do nothing, just waste time
-        }
-    }
+   
+   
 }
 
 int main() {
@@ -22,39 +22,39 @@ int main() {
 
     // Loop to blink the LED
     // The for loop iterates a known number of times (max_blinks)
-    for (counter = 0; counter < max_blinks; counter++) {
+    
         // Conditional statement (if-else)
         // Checks if the current counter value is less than the threshold
-        if (counter < threshold) {
+        
             // Simulate turning LED ON (e.g., set pin high)
             printf("LED ON (Counter: %d)\n", counter); 	// For simulation
-            delay_ms(200); 			// Delay for 200 milliseconds
+             			// Delay for 200 milliseconds
 
             // Simulate turning LED OFF (e.g., set pin low)
             printf("LED OFF (Counter: %d)\n", counter); 	// For simulation
-            delay_ms(200); 		// Delay for 200 milliseconds
-        } else {
+             		// Delay for 200 milliseconds
+        //else 
             // If the counter is at or above the threshold
             printf("Counter reached threshold or above: %d\n", counter);
-            delay_ms(500);		 // Longer delay
-        }
+            		 // Longer delay
+        
         // Increment operator (++) used in the for loop condition
         // counter++ is equivalent to counter = counter + 1;
-    }
+    
 
     // Another conditional statement demonstrating logical operator
-    if (counter == max_blinks && max_blinks > 0) { 
+    
        // Logical AND operator (&&)
         printf("Blinking sequence completed.\n");
-    }
+    
 
     // Example of a while loop
     int countdown = 3;
-    while (countdown > 0) {
+    //while loop for countdown
         printf("Countdown: %d\n", countdown);
-        countdown--; 		// Decrement operator (--)
-        delay_ms(100);
-    }
+         		// Decrement operator (--)
+         //delay timer
+    
     printf("Liftoff!\n");
 
     return 0; 	// Indicate successful execution
