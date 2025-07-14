@@ -1,3 +1,13 @@
+/* Here's a comprehensive Embedded C program that incorporates key concepts and practices mentioned, including:
+•	GPIO control (LEDs and switches)
+•	Modular programming (header/source files)
+•	Bitwise operations
+•	Interrupts
+•	Timers
+•	Sensor interfacing (e.g., temperature)
+•	Communication (UART)
+•	Power-efficient design
+*/
 #include <avr/io.h>
 #include <util/delay.h>
 #include "led.h"
